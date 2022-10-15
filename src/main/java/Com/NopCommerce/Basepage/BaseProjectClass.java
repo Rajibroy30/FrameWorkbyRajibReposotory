@@ -1,5 +1,6 @@
 package Com.NopCommerce.Basepage;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -8,14 +9,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import Com.NopCommerce.Utils.NopComerceUtilities;
+
 public class BaseProjectClass {
 	public static WebDriver driver;
 	static String firstname = "Rajib";
 	static String lasttname = "Roy";		
-	static String email = "RajibRoy650@me.com";
+	static String email = "RajibRoy45@me.com";
 	static String pass = "SmartTech1";
 	
-	public static void BrowserLaunch() throws InterruptedException {
+	public static void BrowserLaunch() throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\Raj Roy\\eclipse-workspace\\FraneworkByRajib\\Driver\\chromedriver.exe");
 		 driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -49,8 +52,12 @@ public class BaseProjectClass {
 	
 	driver.findElement(By.xpath("//a[@class='ico-login']")).click();
 	driver.findElement(By.id("Email")).sendKeys(email);
-	driver.findElement(By.id("Password")).sendKeys(pass);// login
-	driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
+	driver.findElement(By.id("Password")).sendKeys(pass);
+	NopComerceUtilities.getHighLighter(driver.findElement(By.id("Email")));
+	NopComerceUtilities.getHighLighter(driver.findElement(By.id("Password")));
+	NopComerceUtilities.takeScreenShot();
+	
+	driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();// login
 	
 	//driver.navigate().back();
 	
@@ -91,7 +98,7 @@ public class BaseProjectClass {
 	}
 	
 	
-public static void main(String[] args) throws InterruptedException {
+public static void main(String[] args) throws InterruptedException, IOException {
 	
 	
 	BaseProjectClass.BrowserLaunch();
