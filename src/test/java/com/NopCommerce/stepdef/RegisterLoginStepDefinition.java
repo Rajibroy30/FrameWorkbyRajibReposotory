@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import Com.NopCommerce.Basepage.BaseProjectClass;
+import Com.NopCommerce.PageFactory.WebElement;
 import Com.NopCommerce.Utils.NopComerceUtilities;
-import NopCommerce.PageFactory.WebElement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,18 +29,17 @@ public void users_open_the_browser() throws InterruptedException, IOException {
 public void users_navigate_to(String string) {
 	driver.get("https://demo.nopcommerce.com/");
 	driver.manage().deleteAllCookies();	
-	driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 }
 
 @When("Users click on the register button")
 public void users_click_on_the_register_button() {
-    
 	driver.findElement(By.xpath("//a[@href='/register?returnUrl=%2F']")).click();
 }
 
 @When("Users select the Gender")
 public void users_select_the_gender() {
-    
+ 
 	driver.findElement(By.xpath("//input[@id='gender-male']")).click();	
 }
 
@@ -78,14 +77,14 @@ public void users_enter_company_name() {
 	driver.findElement(By.id("Company")).sendKeys("Smart Tech");
 }
 
-@When("users enter Password and Confirm Password")
+@When("Users enter Password and Confirm Password")
 public void users_enter_password_and_confirm_password() {
 	driver.findElement(By.id("Password")).sendKeys(pass);
 	driver.findElement(By.id("ConfirmPassword")).sendKeys(pass);
    
 }
 
-@When("users click on Register Button")
+@When("Users click on Register Button")
 public void users_click_on_register_button() {
     
 	driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click(); // Registration
@@ -99,22 +98,29 @@ public void users_finishes_registration() throws InterruptedException {
 
 }
 
-@Then("users displayed successfully register message and Logs out")
+
+
+
+@Given("Users displayed successfully register message and Logs out")
 public void users_displayed_successfully_register_message_and_logs_out() {
     
 	driver.findElement(By.xpath("//a[@class='ico-logout']")).click();
 }
 
-@Then("user Logs in with Email and Password")
-public void user_logs_in_with_email_and_password() throws IOException {
+@When("User clicks the Login button")
+public void user_clicks_the_login_button() {
+	
 	driver.findElement(By.xpath("//a[@class='ico-login']")).click();
-	driver.findElement(By.id("Email")).sendKeys(email)
-;
+}
+
+@When("Enters the Email and Password")
+public void enters_the_email_and_password() throws IOException {
+	
+	driver.findElement(By.id("Email")).sendKeys(email);
 	driver.findElement(By.id("Password")).sendKeys(pass);
 	NopComerceUtilities.getHighLighter(driver.findElement(By.id("Email")));
 	NopComerceUtilities.getHighLighter(driver.findElement(By.id("Password")));
 	NopComerceUtilities.takeScreenShot();
-	
 }
 
 @Then("Users Logs in and navigates to home page")

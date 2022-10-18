@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Raj Roy\AppData\Local\Temp\testng-eclipse-169377548\testng-customsuite.xml</span>
+                    <span>C:\Users\Raj Roy\AppData\Local\Temp\testng-eclipse--1240627445\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.NopCommerce.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User adds Second item to the Shopping cart&quot;, &quot;User adds items to the cart for checkout&quot;)">runScenario("User adds Second item to the Shopping cart", "User adds items to the cart for checkout")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.NopCommerce.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can Register with valid information&quot;, &quot;Testing the Register functionality to the application&quot;)">runScenario("User can Register with valid information", "Testing the Register functionality to the application")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.NopCommerce.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User adds first item to the cart&quot;, &quot;User adds items to the cart for checkout&quot;)">runScenario("User adds first item to the cart", "User adds items to the cart for checkout")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.NopCommerce.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can Register with valid information&quot;, &quot;Testing the Register and Login/Logout functionality to ...)">runScenario("User can Register with valid information", "Testing the Register and Login/Logout functionality to ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.NopCommerce.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;, &quot;Testing the Register and Login/Logout functionality to the application&quot;)">runScenario("", "Testing the Register and Login/Logout functionality to the application")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -117,6 +141,47 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.NopCommerce.runner.FeatureRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User adds Second item to the Shopping cart&quot;, &quot;User adds items to the cart for checkout&quot;)">
+                  </a> <!-- runScenario("User adds Second item to the Shopping cart", "User adds items to the cart for checkout") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User adds Second item to the Shopping cart", "User adds items to the cart for checkout")</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6CMCEO4&apos;, ip: &apos;192.168.68.61&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\RAJROY~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e83fb0bb7b4bda5b0e91c72bcfef5e4
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.NopCommerce.stepdef.SCheckoutStepDefinition.the_user_clicks_the_add_to_cart_button(SCheckoutStepDefinition.java:90)
+	at ✽.The User clicks the add to cart button(file:///C:/Users/Raj%20Roy/eclipse-workspace/FrameworkByRajib/Features/SCheckout.feature:42)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -125,10 +190,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User can Register with valid information&quot;, &quot;Testing the Register functionality to the application&quot;)">
-                  </a> <!-- runScenario("User can Register with valid information", "Testing the Register functionality to the application") -->
+                  <a name="runScenario(&quot;User adds first item to the cart&quot;, &quot;User adds items to the cart for checkout&quot;)">
+                  </a> <!-- runScenario("User adds first item to the cart", "User adds items to the cart for checkout") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User can Register with valid information", "Testing the Register functionality to the application")</span>
+                  <span class="parameters">("User adds first item to the cart", "User adds items to the cart for checkout")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can Register with valid information&quot;, &quot;Testing the Register and Login/Logout functionality to ...)">
+                  </a> <!-- runScenario("User can Register with valid information", "Testing the Register and Login/Logout functionality to ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can Register with valid information", "Testing the Register and Login/Logout functionality to the application")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;&quot;, &quot;Testing the Register and Login/Logout functionality to the application&quot;)">
+                  </a> <!-- runScenario("", "Testing the Register and Login/Logout functionality to the application") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("", "Testing the Register and Login/Logout functionality to the application")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -138,7 +223,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Raj Roy\AppData\Local\Temp\testng-eclipse-169377548\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Raj Roy\AppData\Local\Temp\testng-eclipse--1240627445\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,16 +280,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.NopCommerce.runner.FeatureRunner')
-data.setCell(0, 3, 6657);
+data.setCell(0, 3, 5552);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'com.NopCommerce.runner.FeatureRunner')
+data.setCell(1, 3, 2972);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'com.NopCommerce.runner.FeatureRunner')
+data.setCell(2, 3, 1362);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.NopCommerce.runner.FeatureRunner')
+data.setCell(3, 3, 1208);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -232,16 +329,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.NopCommerce.runner.FeatureRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@4b6e1c0)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@6920b0bc)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("User can Register with valid information", "Testing the Register functionality to the application")</span>
-                <span class="method-start">152 ms</span>
+                <span class="method-name">runScenario("User can Register with valid information", "Testing the Register and Login/Logout functionality to ...)</span>
+                <span class="method-start">159 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("", "Testing the Register and Login/Logout functionality to the application")</span>
+                <span class="method-start">5712 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User adds first item to the cart", "User adds items to the cart for checkout")</span>
+                <span class="method-start">6921 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User adds Second item to the Shopping cart", "User adds items to the cart for checkout")</span>
+                <span class="method-start">9896 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">6812 ms</span>
+                <span class="method-start">11260 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

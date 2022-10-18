@@ -5,8 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-		features = {"Features/RegistrationAndLogin.feature"},
-		glue = {"com.NopCommerce.stepdef"},
+		features = {"Features/"}, //RegistrationAndLogin.feature","Features/Checkout.feature
+		glue = {"com.NopCommerce.stepdef", "Com.NopCommerce.Hooks"},
 		plugin = {"pretty","json:target/cucumber.json"},
 		dryRun = false,
 		monochrome = true

@@ -18,10 +18,10 @@
 #Sample Feature Definition Template
 
 
-Feature: Testing the Register functionality to the application 
+Feature: Testing the Register and Login/Logout functionality to the application 
  
 
-@Registration
+@Registration 
  Scenario: User can Register with valid information
  
  Given Users open the browser
@@ -32,10 +32,18 @@ Feature: Testing the Register functionality to the application
  And Users enter Date of birth 
  And Users enter Valid Email
  And Users enter Company Name 
- And users enter Password and Confirm Password 
- And users click on Register Button 
+ And Users enter Password and Confirm Password 
+ And Users click on Register Button 
  Then Users Finishes registration
- And users displayed successfully register message and Logs out
- And user Logs in with Email and Password
- And Users Logs in and navigates to home page 
+ 
+ 
+ 
+ @LogoutandLogin 
+ Scenario: 
+	Given Users displayed successfully register message and Logs out
+	When User clicks the Login button
+	And Enters the Email and Password
+ 	Then Users Logs in and navigates to home page 
+ 
+ 
  
