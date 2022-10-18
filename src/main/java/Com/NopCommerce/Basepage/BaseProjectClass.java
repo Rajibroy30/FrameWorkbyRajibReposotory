@@ -13,39 +13,19 @@ import Com.NopCommerce.Utils.NopComerceUtilities;
 
 public class BaseProjectClass {
 	public static WebDriver driver;
-	static String firstname = "Rajib";
-	static String lasttname = "Roy";		
-	static String email = "RajibRoy45@me.com";
-	static String pass = "SmartTech1";
+	public static String firstname = "Rajib";
+	public static String lasttname = "Roy";		
+	public static String email = "RajibRoy456@me.com";
+	public static String pass = "SmartTech1";
 	
 	public static void BrowserLaunch() throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\Raj Roy\\eclipse-workspace\\FraneworkByRajib\\Driver\\chromedriver.exe");
 		 driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();	
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		
-		driver.get("https://demo.nopcommerce.com/");
-	driver.findElement(By.xpath("//a[@href='/register?returnUrl=%2F']")).click();
-	driver.findElement(By.xpath("//input[@id='gender-male']")).click();	
-	driver.findElement(By.xpath("//input[@name='FirstName']")).sendKeys(firstname);
-	driver.findElement(By.xpath("//input[@name='LastName']")).sendKeys(lasttname);
-	
-	
-	Select Date = new Select(driver.findElement(By.name("DateOfBirthDay")));
-	Date.selectByVisibleText("20");
-	
-	Select Month = new Select(driver.findElement(By.name("DateOfBirthMonth")));
-	Month.selectByVisibleText("July");
-	
-	Select Year = new Select (driver.findElement(By.name("DateOfBirthYear")));
-	Year.selectByVisibleText("1993");
-	driver.findElement(By.id("Email")).sendKeys(email);
-	driver.findElement(By.id("Company")).sendKeys("Smart Tech");
-	driver.findElement(By.id("Password")).sendKeys(pass);
-	driver.findElement(By.id("ConfirmPassword")).sendKeys(pass);
-	driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click(); // Registration
-	
+		
+		
+	/*
 	
 	driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']")).click();
 	driver.findElement(By.xpath("//a[@class='ico-logout']")).click();
@@ -90,7 +70,7 @@ public class BaseProjectClass {
 	
 	driver.findElement(By.linkText("Shopping cart")).click();
 
-	
+	*/
 //driver.quit();
 	
 
