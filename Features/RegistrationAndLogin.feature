@@ -40,7 +40,6 @@ Feature: Testing the Register and Login/Logout functionality to the application
  
  @LogoutandLogin 
  Scenario: User logs out and Logs back inn with correct email and password
- 
 	Given Users displayed successfully register message and Logs out
 	When User clicks the Login button
 	And Enters the Email and Password

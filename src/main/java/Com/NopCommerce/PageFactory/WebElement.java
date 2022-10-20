@@ -5,10 +5,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import Com.NopCommerce.Basepage.BaseProjectClass;
 
-public  class WebElement extends BaseProjectClass{
+public class WebElement extends BaseProjectClass{
 
 	public WebElement() {
-		PageFactory.initElements(driver, WebElement.class);
+		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy (xpath ="//a[@href='/register?returnUrl=%2F']")
@@ -37,7 +37,5 @@ public  class WebElement extends BaseProjectClass{
 	public WebElement getDay() {
 		return Day;
 	}
-
-	
 	
 }

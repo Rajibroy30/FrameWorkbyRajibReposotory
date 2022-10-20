@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-19T00:01:55Z" name="Default suite" finished-at="2022-10-19T00:02:07Z" duration-ms="12071">
+  <suite started-at="2022-10-18T10:07:35Z" name="Default suite" finished-at="2022-10-18T10:07:46Z" duration-ms="11407">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-10-19T00:01:55Z" name="Default test" finished-at="2022-10-19T00:02:07Z" duration-ms="12071">
+    <test started-at="2022-10-18T10:07:35Z" name="Default test" finished-at="2022-10-18T10:07:46Z" duration-ms="11407">
       <class name="com.NopCommerce.runner.FeatureRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-19T00:01:55Z" name="setUpClass" finished-at="2022-10-19T00:01:55Z" duration-ms="151" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-18T10:07:35Z" name="setUpClass" finished-at="2022-10-18T10:07:35Z" duration-ms="155" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-19T00:01:55Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-19T00:02:00Z" duration-ms="5776" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-18T10:07:35Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-18T10:07:41Z" duration-ms="5552" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-19T00:02:00Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-19T00:02:02Z" duration-ms="1239" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-18T10:07:41Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-18T10:07:42Z" duration-ms="1208" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-19T00:02:02Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-19T00:02:05Z" duration-ms="3240" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-18T10:07:42Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-18T10:07:45Z" duration-ms="2972" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-19T00:02:05Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-19T00:02:06Z" duration-ms="1493" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-18T10:07:45Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-18T10:07:46Z" duration-ms="1362" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -90,8 +90,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-6CMCEO4', ip: '192.168.68.61', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\RAJROY~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50002}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9b68a87e8752e085379c6c49ed8913bb]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\RAJROY~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e83fb0bb7b4bda5b0e91c72bcfef5e4]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
@@ -100,8 +100,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-6CMCEO4', ip: '192.168.68.61', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\RAJROY~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50002}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9b68a87e8752e085379c6c49ed8913bb
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\RAJROY~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e83fb0bb7b4bda5b0e91c72bcfef5e4
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -121,7 +121,7 @@ at ✽.The User clicks the add to cart button(file:///C:/Users/Raj%20Roy/eclipse
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-19T00:02:06Z" name="tearDownClass" finished-at="2022-10-19T00:02:07Z" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.NopCommerce.runner.FeatureRunner@4fbe37eb]" started-at="2022-10-18T10:07:46Z" name="tearDownClass" finished-at="2022-10-18T10:07:46Z" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

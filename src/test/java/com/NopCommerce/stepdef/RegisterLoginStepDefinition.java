@@ -17,8 +17,8 @@ import io.cucumber.java.en.When;
 
 public class RegisterLoginStepDefinition extends BaseProjectClass{
 	
-	WebElement pf =PageFactory.initElements(driver, WebElement.class) ;
-	//PageFactory.initElements(driver, WebElement.class)
+	WebElement pf = PageFactory.initElements(driver, WebElement.class);
+
 @Given("Users open the browser")
 public void users_open_the_browser() throws InterruptedException, IOException {
     
@@ -39,6 +39,7 @@ public void users_click_on_the_register_button() {
 
 @When("Users select the Gender")
 public void users_select_the_gender() {
+ 
 	driver.findElement(By.xpath("//input[@id='gender-male']")).click();	
 }
 
