@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import Com.NopCommerce.Basepage.BaseProjectClass;
-import Com.NopCommerce.PageFactory.WebElement;
+import Com.NopCommerce.PageFactory.NopCommerceWebElement;
 import Com.NopCommerce.Utils.NopComerceUtilities;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,7 +17,7 @@ import io.cucumber.java.en.When;
 
 public class RegisterLoginStepDefinition extends BaseProjectClass{
 	
-	WebElement pf = PageFactory.initElements(driver, WebElement.class);
+	NopCommerceWebElement pf = PageFactory.initElements(driver, NopCommerceWebElement.class);
 
 @Given("Users open the browser")
 public void users_open_the_browser() throws InterruptedException, IOException {
@@ -34,7 +34,9 @@ public void users_navigate_to(String string) {
 
 @When("Users click on the register button")
 public void users_click_on_the_register_button() {
-	driver.findElement(By.xpath("//a[@href='/register?returnUrl=%2F']")).click();
+	pf = PageFactory.initElements(driver, NopCommerceWebElement.class);
+	pf.getRegisterButton().click();
+	//driver.findElement(By.xpath("//a[@href='/register?returnUrl=%2F']")).click();
 }
 
 @When("Users select the Gender")

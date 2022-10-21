@@ -41,7 +41,8 @@ Feature: User adds items to the cart for checkout
     And User enters the Quantity of the item
     Then The User clicks the add to cart button
    	And The User views all the item added onto the cart
-    
+    And The User accepts the terms of service
+    And The user navigates to the check out page  
     
     
     

@@ -1,13 +1,14 @@
 package Com.NopCommerce.PageFactory;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Com.NopCommerce.Basepage.BaseProjectClass;
 
-public class WebElement extends BaseProjectClass{
+public class NopCommerceWebElement extends BaseProjectClass{
 
-	public WebElement() {
+	public NopCommerceWebElement() {
 		PageFactory.initElements(driver, this);
 	}
 	

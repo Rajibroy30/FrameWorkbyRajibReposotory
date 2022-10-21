@@ -5,14 +5,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import Com.NopCommerce.Basepage.BaseProjectClass;
-import Com.NopCommerce.PageFactory.WebElement;
+import Com.NopCommerce.PageFactory.NopCommerceWebElement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class SCheckoutStepDefinition extends BaseProjectClass{
 	
-	WebElement pf = PageFactory.initElements(driver, WebElement.class);
+	NopCommerceWebElement pf = PageFactory.initElements(driver, NopCommerceWebElement.class);
 	@Given("Users navigates to home page")
 	public void users_navigates_to_home_page() {
 		driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']")).click();
@@ -81,14 +81,13 @@ public class SCheckoutStepDefinition extends BaseProjectClass{
 	    
 		driver.findElement(By.id("product_enteredQuantity_20")).clear();
 		driver.findElement(By.id("product_enteredQuantity_20")).sendKeys("3");
-		driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+		
 	}
 	
 	@Then("The User clicks the add to cart button")
 	public void the_user_clicks_the_add_to_cart_button() {
 	    
-		driver.findElement(By.xpath("//button[@type='button']")).click();
-		driver.findElement(By.xpath("//span[@class='close']")).click();		
+		driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();	
 	}
 	@Then("The User views all the item added onto the cart")
 	public void the_user_views_all_the_item_added_onto_the_cart() {
