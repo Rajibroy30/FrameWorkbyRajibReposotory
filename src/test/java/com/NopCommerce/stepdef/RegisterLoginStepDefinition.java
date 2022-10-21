@@ -41,28 +41,29 @@ public void users_click_on_the_register_button() {
 
 @When("Users select the Gender")
 public void users_select_the_gender() {
- 
-	driver.findElement(By.xpath("//input[@id='gender-male']")).click();	
+ pf.getGenderselect().click();
+	//driver.findElement(By.xpath("//input[@id='gender-male']")).click();	
 }
 
 @When("Users enter the Name")
 public void users_enter_the_name() {
-    
-	driver.findElement(By.xpath("//input[@name='FirstName']")).sendKeys(firstname);
-	driver.findElement(By.xpath("//input[@name='LastName']")).sendKeys(lasttname);
+    pf.getFirstname().sendKeys(firstname);
+//	driver.findElement(By.xpath("//input[@name='FirstName']")).sendKeys(firstname);
+	pf.getLastname().sendKeys(lasttname);
+    //driver.findElement(By.xpath("//input[@name='LastName']")).sendKeys(lasttname);
 }
 
 @When("Users enter Date of birth")
 public void users_enter_date_of_birth() {
     
 
-	Select Date = new Select(driver.findElement(By.name("DateOfBirthDay")));
+	Select Date = new Select(pf.getDay());
 	Date.selectByVisibleText("20");
 	
-	Select Month = new Select(driver.findElement(By.name("DateOfBirthMonth")));
+	Select Month = new Select(pf.getMonth());
 	Month.selectByVisibleText("July");
 	
-	Select Year = new Select (driver.findElement(By.name("DateOfBirthYear")));
+	Select Year = new Select (pf.getYear());
 	Year.selectByVisibleText("1993");
 }
 

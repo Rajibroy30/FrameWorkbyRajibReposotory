@@ -38,5 +38,14 @@ public class NopCommerceWebElement extends BaseProjectClass{
 	public WebElement getDay() {
 		return Day;
 	}
-	
+	@FindBy (name = "DateOfBirthMonth")
+	private WebElement Month;
+	public WebElement getMonth() {
+		return Month;
+	}
+	@FindBy (name = "DateOfBirthYear")
+	private WebElement Year;
+	public WebElement getYear() {
+		return Year;
+	}
 }
