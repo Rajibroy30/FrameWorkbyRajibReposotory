@@ -79,13 +79,13 @@ public void users_enter_valid_email() {
 @When("Users enter Company Name")
 public void users_enter_company_name() {
     
-	driver.findElement(By.id("Company")).sendKeys("Smart Tech");
+	pf.getCompany().sendKeys("Smart Tech");
 }
 
 @When("Users enter Password and Confirm Password")
 public void users_enter_password_and_confirm_password() {
-	driver.findElement(By.id("Password")).sendKeys(pass);
-	driver.findElement(By.id("ConfirmPassword")).sendKeys(pass);
+	pf.getPassword().sendKeys(pass);
+	pf.getConfirmPassword().sendKeys(pass);
    
 }
 
@@ -99,7 +99,7 @@ public void users_click_on_register_button() {
 public void users_finishes_registration() throws InterruptedException {
     
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//a[@class='button-1 register-continue-button']")).sendKeys(Keys.ENTER);
+	pf.getRegisterButton1().sendKeys(Keys.ENTER);
 
 }
 

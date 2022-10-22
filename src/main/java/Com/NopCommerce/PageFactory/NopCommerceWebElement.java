@@ -48,4 +48,25 @@ public class NopCommerceWebElement extends BaseProjectClass{
 	public WebElement getYear() {
 		return Year;
 	}
+	@FindBy (id="Company")
+	private WebElement Company;
+	public WebElement getCompany() {
+		return Company;
+	}
+	@FindBy (id = "Password")
+	private WebElement Password;
+	public WebElement getPassword() {
+		return Password;
+	}
+	@FindBy (id = "ConfirmPassword")
+	private WebElement ConfirmPassword;
+	public WebElement getConfirmPassword() {
+		return ConfirmPassword;
+	}
+	@FindBy (xpath ="//a[@class='button-1 register-continue-button']")
+	private WebElement RegisterButton1;
+	public WebElement getRegisterButton1() {
+		return RegisterButton1;
+	}
+
 }
