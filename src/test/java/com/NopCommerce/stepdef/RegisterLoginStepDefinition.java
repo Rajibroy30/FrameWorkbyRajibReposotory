@@ -34,7 +34,9 @@ public void users_navigate_to(String string) {
 
 @When("Users click on the register button")
 public void users_click_on_the_register_button() {
+	
 	pf = PageFactory.initElements(driver, NopCommerceWebElement.class);
+	
 	pf.getRegisterButton().click();
 	//driver.findElement(By.xpath("//a[@href='/register?returnUrl=%2F']")).click();
 }

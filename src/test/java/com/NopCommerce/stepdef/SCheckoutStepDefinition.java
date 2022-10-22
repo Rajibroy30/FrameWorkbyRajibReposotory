@@ -93,7 +93,16 @@ public class SCheckoutStepDefinition extends BaseProjectClass{
 	public void the_user_views_all_the_item_added_onto_the_cart() {
 		driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[4]/a/span[1]")).click();
 	}
+	@Then("The User accepts the terms of service")
+	public void the_user_accepts_the_terms_of_service() {
+	    driver.findElement(By.xpath("(//input[@type='checkbox'])[3]")).click();
+	}
 
+	@Then("The user navigates to the check out page")
+	public void the_user_navigates_to_the_check_out_page() {
+		 driver.findElement(By.xpath("(//button[@type='submit'])[6]")).click();
+		 driver.quit();
+	}
 	
 	
 }

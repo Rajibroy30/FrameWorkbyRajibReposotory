@@ -16,11 +16,10 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
 Feature: User adds items to the cart for checkout 
   
 
-@AddToCart1 
+@AddToCart1
   Scenario: User adds first item to the cart
   
    Given Users navigates to home page 
@@ -32,7 +31,7 @@ Feature: User adds items to the cart for checkout
    And The User views the item added onto the cart
    
    
- @AddToCart2 
+ @AddToCart21 
   Scenario: User adds Second item to the Shopping cart
     
     Given User Selects the Electronics Tab
@@ -42,11 +41,4 @@ Feature: User adds items to the cart for checkout
     Then The User clicks the add to cart button
    	And The User views all the item added onto the cart
     And The User accepts the terms of service
-    And The user navigates to the check out page  
-    
-    
-    
-    
-    
-    
-    
+    And The user navigates to the check out page 
