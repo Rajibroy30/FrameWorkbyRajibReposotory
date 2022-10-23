@@ -30,21 +30,21 @@ public class NegativeLoginStepDefinition extends BaseProjectClass{
 	    
 
 		
-		driver.findElement(By.xpath("//a[@class='ico-login']")).click();
+		pf.getLogin().click();
 	}
 
 	@When("I enter {string} and {string}")
 	public void i_enter_and(String email, String password) {
-		driver.findElement(By.id("Email")).sendKeys(email);
-		driver.findElement(By.id("Password")).sendKeys(password);
-		NopComerceUtilities.getHighLighter(driver.findElement(By.id("Email")));
-		NopComerceUtilities.getHighLighter(driver.findElement(By.id("Password")));
+		pf.getEmail().sendKeys(email);
+		pf.getPassword().sendKeys(password);
+		NopComerceUtilities.getHighLighter(pf.getEmail());
+		NopComerceUtilities.getHighLighter(pf.getPassword());
 	}
 
 	@When("I click on the login button")
 	public void i_click_on_the_login_button() {
 	    
-		driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();// login
+		pf.getSubmit().click();// login
 	}
 
 	@Then("I am suppose to get an error message")

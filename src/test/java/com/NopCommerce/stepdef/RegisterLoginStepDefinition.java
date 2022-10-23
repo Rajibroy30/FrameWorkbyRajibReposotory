@@ -71,8 +71,7 @@ public void users_enter_date_of_birth() {
 
 @When("Users enter Valid Email")
 public void users_enter_valid_email() {
-	driver.findElement(By.id("Email")).sendKeys(email)
-;
+	pf.getEmail().sendKeys(email);
    
 }
 
@@ -92,14 +91,14 @@ public void users_enter_password_and_confirm_password() {
 @When("Users click on Register Button")
 public void users_click_on_register_button() {
     
-	driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click(); // Registration
+	pf.getSubmit().sendKeys(Keys.ENTER); // Registration
 }
 
 @Then("Users Finishes registration")
 public void users_finishes_registration() throws InterruptedException {
     
 	Thread.sleep(2000);
-	pf.getRegisterButton1().sendKeys(Keys.ENTER);
+	pf.getContinue().click();
 
 }
 
@@ -109,29 +108,29 @@ public void users_finishes_registration() throws InterruptedException {
 @Given("Users displayed successfully register message and Logs out")
 public void users_displayed_successfully_register_message_and_logs_out() {
     
-	driver.findElement(By.xpath("//a[@class='ico-logout']")).click();
+	pf.getLogout().click();
 }
 
 @When("User clicks the Login button")
 public void user_clicks_the_login_button() {
 	
-	driver.findElement(By.xpath("//a[@class='ico-login']")).click();
+	pf.getLogin().click();
 }
 
 @When("Enters the Email and Password")
 public void enters_the_email_and_password() throws IOException {
 	
-	driver.findElement(By.id("Email")).sendKeys(email);
-	driver.findElement(By.id("Password")).sendKeys(pass);
-	NopComerceUtilities.getHighLighter(driver.findElement(By.id("Email")));
-	NopComerceUtilities.getHighLighter(driver.findElement(By.id("Password")));
+	pf.getEmail().sendKeys(email);
+	pf.getPassword().sendKeys(pass);
+	NopComerceUtilities.getHighLighter(pf.getEmail());
+	NopComerceUtilities.getHighLighter(pf.getPassword());
 	NopComerceUtilities.takeScreenShot();
 }
 
 @Then("Users Logs in and navigates to home page")
 public void users_logs_in_and_navigates_to_home_page() {
     
-	driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();// login
+	pf.getSubmit().sendKeys(Keys.ENTER);// login
 }
 
 }
