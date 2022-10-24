@@ -172,4 +172,5 @@ public class NopCommerceWebElement extends BaseProjectClass{
 	public WebElement getCheckout() {
 		return Checkout;
 	}
+	
 }

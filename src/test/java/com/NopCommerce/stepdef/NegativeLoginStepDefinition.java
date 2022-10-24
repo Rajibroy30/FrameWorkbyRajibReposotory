@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import Com.NopCommerce.Basepage.BaseProjectClass;
@@ -22,36 +23,36 @@ public class NegativeLoginStepDefinition extends BaseProjectClass{
 		BaseProjectClass.BrowserLaunch();
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().deleteAllCookies();	
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
 	}
 
 	@When("I click on the sign in button on homepage")
 	public void i_click_on_the_sign_in_button_on_homepage() {
-	    
 
-		
-		pf.getLogin().click();
+		driver.findElement(By.xpath("//a[@class='ico-login']")).click();
+		 
 	}
 
 	@When("I enter {string} and {string}")
 	public void i_enter_and(String email, String password) {
-		pf.getEmail().sendKeys(email);
-		pf.getPassword().sendKeys(password);
-		NopComerceUtilities.getHighLighter(pf.getEmail());
-		NopComerceUtilities.getHighLighter(pf.getPassword());
+		driver.findElement(By.id("Email")).sendKeys(email);
+		driver.findElement(By.id("Password")).sendKeys(password);
+		NopComerceUtilities.getHighLighter(driver.findElement(By.id("Email")));
+		NopComerceUtilities.getHighLighter(driver.findElement(By.id("Password")));
 	}
 
 	@When("I click on the login button")
 	public void i_click_on_the_login_button() {
 	    
-		pf.getSubmit().click();// login
+		driver.findElement(By.xpath("(//button[@type='submit'])[2]")).sendKeys(Keys.ENTER);// login
+	
 	}
 
 	@Then("I am suppose to get an error message")
 	public void i_am_suppose_to_get_an_error_message() throws IOException {
 		
 		NopComerceUtilities.takeScreenShot();
-	    driver.quit();
-	}
+		driver.quit();
+}
 
 }

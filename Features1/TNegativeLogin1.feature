@@ -10,8 +10,10 @@ And I click on the login button
 Then I am suppose to get an error message
 
 Examples:
+
+
 | email                     | password 		 	 |
-| RajibRoy@me.com           | SmartTech1     |
+| RajibRoy0@me.com          | SmartTech100     |
 | RajibRoy00@me.com 				| SmartTech10    |
 | RajibRoy000@me.com 			  | SmartTech100   |
 | RajibRoy0000@me.com    	  | SmartTech100   |
