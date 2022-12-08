@@ -13,7 +13,7 @@ Examples:
 
 
 | email                     | password 		 	 |
-| RajibRoy0@me.com          | SmartTech100     |
+| RajibRoy0@me.com          | SmartTech100    |
 | RajibRoy00@me.com 				| SmartTech10    |
 | RajibRoy000@me.com 			  | SmartTech100   |
 | RajibRoy0000@me.com    	  | SmartTech100   |

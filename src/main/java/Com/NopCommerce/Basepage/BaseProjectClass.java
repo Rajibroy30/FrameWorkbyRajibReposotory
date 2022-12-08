@@ -16,7 +16,7 @@ public class BaseProjectClass {
 	public static WebDriver driver;
 	public static String firstname = "Rajib";
 	public static String lasttname = "Roy";		
-	public static String email = "Rajib1Roy@me.com";
+	public static String email = "RajibRoy@me.com";
 	public static String pass = "SmartTech1";
 	
 	public static void BrowserLaunch() throws InterruptedException, IOException {

@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import Com.NopCommerce.Basepage.BaseProjectClass;
 import Com.NopCommerce.PageFactory.NopCommerceWebElement;
@@ -48,11 +49,14 @@ public void users_select_the_gender() {
 }
 
 @When("Users enter the Name")
-public void users_enter_the_name() {
+public void users_enter_the_name() throws InterruptedException {
     pf.getFirstname().sendKeys(firstname);
 //	driver.findElement(By.xpath("//input[@name='FirstName']")).sendKeys(firstname);
 	pf.getLastname().sendKeys(lasttname);
     //driver.findElement(By.xpath("//input[@name='LastName']")).sendKeys(lasttname);
+//	Thread.sleep(2000);
+	String actual = driver.findElement(By.linkText("Register")).getText();
+	Assert.assertTrue(actual.contains("Register"));
 }
 
 @When("Users enter Date of birth")
